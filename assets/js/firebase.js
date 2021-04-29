@@ -23,10 +23,38 @@ function submitForm(e) {
     //GetValues
     let name = getInputValues("name");
     let phone = "+996" + getInputValues("phone");
+    let message = getInputValues("message");
     console.log(name);
     console.log(phone);
 
-    saveMessage(name, phone);
+    if (phonenumber()) {
+        saveMessage(name, phone, message);
+        showAlert();
+        disable();
+    }
+
+    //reset input values
+    contactForm.reset();
+}
+
+//show alert
+function showAlert() {
+    //show alert
+    document.querySelector('.sent-message').style.display = 'block';
+
+    //Hide alert after 4 seconds
+    setTimeout(function () {
+        document.querySelector('.sent-message').style.display = 'none';
+    }, 4000);
+}
+
+//disable button after send messages
+function disable() {
+    let x = document.getElementById("submit");
+    x.disabled = true;
+    setTimeout(function () {
+        x.disabled = false;
+    }, 4000);
 }
 
 
@@ -36,10 +64,11 @@ function getInputValues(id) {
 }
 
 //Save message to firebase
-function saveMessage(name, phone) {
+function saveMessage(name, phone, message) {
     let newMessageRef = messagesRef.push();
     newMessageRef.set({
         name: name,
-        phone: phone
+        phone: phone,
+        message: message,
     });
 }
