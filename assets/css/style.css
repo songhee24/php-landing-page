@@ -138,12 +138,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media screen and (min-width:1400px) {
-  .container-sm {
-    max-width: 520px;
-  }
-}
-
 
 /* clock */
 
@@ -182,6 +176,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 
+/* @media (max-width: 1399px) {
+  #clockdiv {
+    display: none;
+  }
+
+  .sub-banner {
+    display: none;
+  }
+} */
+
 /* Header Top */
 
 #header.header-top {
@@ -218,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   #header.header-top h1 {
     font-size: 26px;
+    margin-top: 0px; 
   }
 }
 
@@ -392,11 +397,15 @@ section .container {
 @media (max-width: 768px) {
   section {
     top: 120px;
+    /* padding-top: 100px;  */
   }
   section.section-show {
     top: 80px;
   }
 }
+
+
+
 
 .section-title h2 {
   font-size: 20px;
@@ -1236,4 +1245,9 @@ section .container {
 
 .credits a:hover {
   color: #fff;
+}
+
+.google-map {
+  display: flex;
+  flex-wrap: wrap;
 }

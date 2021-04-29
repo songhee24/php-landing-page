@@ -43,19 +43,23 @@
           <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
           <h2>онлайн <span>программалоо</span> үчүн платформа </h2>
           <div class="gl-p">
-            <p> Биз талап кылынган Java кызматкерлерин жеке менторлор<br> мененonline-offline даярдайбыз. Бардык
+            <p id="p-text"> Биз талап кылынган Java кызматкерлерин жеке менторлор<br> менен online-offline даярдайбыз.
+              Бардык
               денгээлден биринчи жумуш күнүнө чейин.
             </p>
           </div>
-    
+
           <nav id="navbar" class="navbar">
             <ul>
-              <li><a class="nav-link active" href="#header">Home</a></li>
-              <li><a class="nav-link" href="#about">Java жөнундө</a></li>
-              <li><a class="nav-link" href="#resume">Окуу программасы </a></li>
-              <li><a class="nav-link" href="#portfolio">Окуу процесси</a></li>
-              <li><a class="nav-link" href="#services">Өзгөчүлүүгү</a></li>
-              <li><a class="nav-link" href="#contact">Contact</a></li>
+              <li><a class="nav-link active" href="#header" onclick="toggle_visible('p-text', 'clockdiv');">Home</a>
+              </li>
+              <li><a class="nav-link" href="#about" onclick="toggle_hide('p-text', 'clockdiv');">Java жөнундө</a></li>
+              <li><a class="nav-link" href="#resume" onclick="toggle_hide('p-text', 'clockdiv');">Окуу программасы </a>
+              </li>
+              <li><a class="nav-link" href="#portfolio" onclick="toggle_hide('p-text', 'clockdiv');">Окуу процесси</a>
+              </li>
+              <li><a class="nav-link" href="#services" onclick="toggle_hide('p-text', 'clockdiv');">Өзгөчүлүүгү</a></li>
+              <li><a class="nav-link" href="#contact" onclick="toggle_hide('p-text', 'clockdiv');">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -70,7 +74,7 @@
         </div>
         <div class="col">
           <div id="clockdiv" class="container-sm">
-            <h3 class="data_ku">Кудай Буйруса скоро</h3>
+            <h3 class="data_ku"> <time datetime="2021-05-31 20:00">Start: 2021-05-31 20:00</time> </h3>
             <div>
               <span class="days"></span>
               <div class="smalltext">Days</div>
@@ -90,7 +94,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
   </header><!-- End Header -->
 
   <!-- ======= About Section ======= -->
@@ -566,12 +570,44 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Services</h2>
-        <p>My Services</p>
+        <h2>Өзгөчүлүүгү </h2>
+        <p style="font-size:20px">Биздин менторлор биринчи жумуш күнүңүзгө чейин сиз менен болот.
+        </p>
       </div>
 
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="resume-item pb-0">
+            <!-- <h4>Alice Barkley</h4> -->
+            <p>
+            <ul>
+              <li>Ментор менен жекеме-жеке иштөө</li>
+              <li>Биздин окуу ментор менен студенттин ортосундагы жекече баарлашууга негизделген. Ментор менен жумасына
+                5 күн, зуум же чат аркылуу сизге ыңгайлуу болгон убакта кайрылсаңыз болот.</li>
+              <li>Сиздин өнүгүүңүздүн ар бир баскычында алган билимиңизди катуу көзөмөлдөө. Бирок ментор репетитор эмес.
+                Анын милдети - билимиңиздин өздөштүрүлүшүн көзөмөлдөө. Жазган кодуңузга болгон текшерүүлор жана берилген
+                жеңил эмес суроолор сизди көзкарандысыз согушкер кылып, кыйынчылыктарды жеңүүгө даяр кылат.</li>
+              <li>Чыныгы бизнес долбоордо билимди практика жүзүндө көрсөтүү</li>
+              <li>Командалардагы бардык студенттерибиз чыныгы коммерциялык долбоорлорду ишке ашырууга катышышат. Сиз
+                теорияны, командада иштөөну үйрөнуп, тажрыйбаңызды улантасыз.</li>
+              <li>Иштин биринчи күнүнө чейин менторлордун колдоосу. Биздин менторлор сизге жумушка өтүү үчүн резюмени
+                түзүүгө жардам берет жана интервьюнун оор суроолоруна жооп берүүгө даярдайт.</li>
+            </ul>
+            </p>
+          </div>
 
+          <div class="optional-header">
+            <h3 class="resume-title">Биздин эрежелер менен ойносоңуз, анда сөзсүз Java кызматкери болосуз.</h3>
+          </div>
+        </div>
+      </div>
 
+      <div class="section-title">
+        <h2>COMMUNITY</h2>
+        <p style="font-size:20px">Сиз биздин студенттердин slack группасындагы жабык жамаатына кире аласыз br жана
+          бүтүрүүчүлөргө жана студенттерге суроолоруңузду бере аласыз
+        </p>
+      </div>
     </div>
 
     </div>
@@ -582,11 +618,44 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Portfolio</h2>
-        <p>My Works</p>
+        <h2> Окуу процесси</h2>
+        <!-- <p>My Works</p> -->
       </div>
 
       <div class="row">
+        <div class="col-lg-6">
+          <div class="resume-item pb-0">
+            <!-- <h4>Alice Barkley</h4> -->
+            <p>
+            <ol>
+              <li>Вебсайтта арыз калтыргандан кийин, окуу координатору сиз менен байланышат.</li>
+              <li>Ментор сиздин деңгээлинизди текшерет.</li>
+              <li>Сизге зуум конференцияга шилтеме жиберилет, ал конференцияда сиздин группаныз менен таанышуу жана окуу
+                процесси түшүндүрүлөт.</li>
+              <li>Окуу платформасына доступ берилет. Платформада сиз теориялык материалдарды, макалаларды жана
+                видеотасмаларды коруп, тема боюнча берилген тапшырмаларды аткарасыз.</li>
+              <li>Эгерде тапшырма чыгаруу учурунда сизде көйгөй келип чыкса, анда менторго же студенттер группасынан
+                жардам сурайсыз.</li>
+              <li>Ар бир теманы аяктагандан кийин, ментор сиз менен интервью кылып билиминизди текшерет жана коддорду
+                карап чыгууну жүргүзөт. Ар бир жолу сизде ар кандай менторлор болот, ошондо сиз максималдуу билим жана
+                тажрыйба аласыз.</li>
+              <li>Командалык долбоордун учуру келгенде, сиз буга чейин долбоорго жазылган код менен таанышасыз. Ошондой
+                эле, сиз команда жана командаңыздын лидери менен таанышасыз..</li>
+              <li>Лидериниз сизди кийинки этапка өткөзгөндө, сизге интервьюлардагы оор суроолордун списогу жооптору
+                менен жиберилет. </li>
+              <li>Программаны аяктагандан кийин, ментор сизге резюме жазууга жардам берет.</li>
+              <li>Андан кийин, резюмени жумуш издөө сайтына жайгаштырып, интервьюлардан өтүп баштайсыз.</li>
+            </ol>
+            </p>
+          </div>
+
+          <div class="optional-header">
+            <h3 class="resume-title">Биздин эрежелер менен ойносоңуз, анда сөзсүз Java кызматкери болосуз.</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
@@ -743,7 +812,7 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
     </div>
   </section><!-- End Portfolio Section -->
@@ -760,32 +829,37 @@
       <div class="row mt-2">
 
         <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
+          <div class="info-box google-map">
             <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>tunguch 103</p>
+            <h3>Address</h3>
+            <p>Бишкек, Кок-Жар ж/м <br>Переулок Ой-Терскен, 21 </p>
+            <iframe width="600" height="450" style="border:2px solid rgb(97, 145, 195); margin-top: 10px;"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d615.0406786753036!2d74.6393846540182!3d42.8381542947971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb6629ed6cea5%3A0x53e9c9ab08d69569!2z0L_QtdGA0LXRg9C70L7QuiDQntC5LdCi0LXRgNC10LrQtdC9LCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1619613666719!5m2!1sru!2skg"
+              allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
 
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
+          <div class="info-box google-map">
             <i class="bx bx-share-alt"></i>
             <h3>Social Profiles</h3>
             <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <!-- <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> -->
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
             </div>
+            <iframe width="600" height="450" style="border:2px solid rgb(73, 99, 170); margin-top: 10px;"
+              src="https://www.instagram.com/p/CNSGs9YHtrS/embed" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
 
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Email Me</h3>
-            <p>musa.mainazarov@gmail.com</p>
+            <h3>Email</h3>
+            <p>school@peaksoft.us</p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
@@ -800,17 +874,14 @@
       <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
         <div class="row">
           <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Аты жонунуз" required>
           </div>
           <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            <input type="email" class="form-control" name="tel" id="email" placeholder="телефон номериниз" required>
           </div>
         </div>
         <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          <textarea class="form-control" name="message" rows="5" placeholder="ЭМНЕ"></textarea>
         </div>
         <div class="my-3">
           <div class="loading">Loading</div>
@@ -834,10 +905,18 @@
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/clock.js"></script>
+  <script src="assets/js/hideFinction.js"></script>
+  <script src="assets/js/firebase.js"></script>
 </body>
 
 </html>
